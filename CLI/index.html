@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>Billy Okeyo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bulma.min.css">
+
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="js/queryloader2.min.js"></script>
+
+    <style>
+        #qLoverlay::after {
+            text-align: center;
+            font-family: sans-serif;
+            position: absolute;
+            color: #0196a7;
+            content: 'System Booting Up...';
+            left: 0;
+            right: 0;
+            bottom: 40%;
+            font-size: 20px;
+            color: #FFF;
+        }
+    </style>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            "use strict";
+            new QueryLoader2(document.querySelector("body"), {
+                barColor: "#0196a7",
+                backgroundColor: "#111",
+                percentage: true,
+                barHeight: 1,
+                minimumTime: 2000,
+                fadeOutTime: 2000
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <section class="hero is-fullheight">
+        <center>
+            <div class="logo-container" style="padding-top: 30px;">
+                <a href="../index.html">
+                    <img src="img/Billy_Logo.png" height="37" width="300" alt="">
+                </a>
+            </div>
+        </center>
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-3 is-flex">
+                        <div class="column-child sidebar shadow">
+                            <div class="sidebar-header has-text-centered">
+                                <img src="img/LR1.png" alt="Avatar" class="sidebar-image">
+                                <h2 class="header-name">Billy Okeyo</h2>
+                                <h5>Fullstack Web Developer</h5>
+                                <div class="social-icons">
+                                    <a href="https://www.facebook.com/billy.dan.927"><i class="fab fa-facebook icon"></i></a>
+                                    <a href="https://twitter.com/Billy_de_cartel"><i class="fab fa-twitter icon"></i></a>
+                                    <a href="https://github.com/cartel360"><i class="fab fa-github icon"></i></a>
+                                    <a href="https://www.linkedin.com/billyokeyo/"><i class="fab fa-linkedin icon"></i></a>
+                                    <a href="https://www.instagram.com/pank_billy_de_cartel/?hl=en"><i class="fab fa-instagram icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-flex">
+                        <div class="column-child terminal shadow">
+                            <div class="terminal-bar dark-mode">
+                                <div class="icon-btn close"></div>
+                                <div class="icon-btn min"></div>
+                                <div class="icon-btn max"></div>
+                                <div class="terminal-bar-text is-hidden-mobile dark-mode-text">guest@billy: ~</div>
+                            </div>
+                            <div class="terminal-window primary-bg" onclick="document.getElementById('dummyKeyboard').focus();">
+                                <div class="terminal-output" id="terminalOutput">
+                                    <div class="terminal-line">
+                                        <span class="help-msg">Welcome to Billy's Portfolio — Type <span class="code">help</span> for a list of supported commands.</span>
+                                    </div>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="success">➜</span> <span class="directory">~</span> <span class="user-input" id="userInput"></span>
+                                    <input type="text" id="dummyKeyboard" class="dummy-keyboard">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>
+                    Made with <i class="fas fa-heart icon"></i> by Billy Okeyo
+                </p>
+            </div>
+        </footer>
+    </section>
+    <script src="js/script.js"></script>
+    <script src="js/all.js"></script>
+</body>
+
+</html>
